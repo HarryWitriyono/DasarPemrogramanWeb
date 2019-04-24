@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+ <head><title>Form dan Javascript</title>
+ </head>
+ <script>
+  function ceklogin(){
+	  var un = document.form1.username.value;
+	  var pass=document.form1.password.value;
+	  if (un != 'aDmIn') {
+		  window.alert('Kode login / username salah !');
+	  } else {
+		  if (pass == 'y41tul4h') {
+			  window.alert('Anda sukses, silahkan melanjutkan !');
+			  window.open('http://siakad.umb.ac.id');
+			  window.close();
+		  } else {
+			  window.alert('Password anda salah !');
+		  }
+	  }
+  }
+ </script>
+ <body>
+ <form method="post" name="form1">
+ <div id="judulform">Contoh Hard Login</div>
+ Username:<br>
+ <input type="text" name="username" placeholder="Ketik kode login/username aplikasi untuk anda"><br>
+ Password:<br>
+ <input type="password" name="password" placeholder="Ketik passwordnya "><br>
+ <input type="submit" value="Login" name="blogin" onclick="ceklogin();">
+ </form>
+ </body>
+</html>
