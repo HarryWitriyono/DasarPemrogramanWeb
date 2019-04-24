@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>Aplikasi Dropdown Menu</title>
+  <style>
+  #header{background-color:blue;width:100%;float:left;
+          color:white;
+		  font-size:40px;
+		  text-align:center;
+		  height:80px;
+		  padding-top:20px;
+  }
+  #dropdown{overflow: hidden; 
+            background-color:#333;
+			color:#ffffff;
+			width:100%;
+  }
+ #dropdown a{float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  }
+ #dropdown-sub{float: left;
+                overflow: hidden;
+  }
+ #dropbtn{
+              font-size: 16px;  
+              border: none;
+              outline: none;
+              color: white;
+              padding: 14px 16px;
+              background-color: inherit;
+              font-family: inherit;
+              margin: 0;
+  }
+  #dropdown a:hover,#dropdown-sub:hover {background-color:red;
+  }
+  #dropdown-isi{margin-top:45px;
+            display: none;
+            position: absolute;
+            background-color:#f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+  }
+  #dropdown-isi a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+ } 
+ #dropdown-sub:hover #dropdown-isi  {display: block;opacity:0.8;
+  }
+ </style>
+ </head>
+ <body>
+  <div id="header">Aplikasi Web Profile dengan Drop Down Menu Horizontal
+  </div>
+  <div id="dropdown">
+   <a href="#">Beranda</a>
+   <div id="dropdown-sub">
+     <a href="#"id="dropbtn">Media</a>
+     <div id="dropdown-isi">
+     <a href="#">Suara</a>
+     <a href="#">Video</a>
+   </div>
+  </div>
+  <div id="dropdown-sub">
+  
+   <a href="#" id="dropbtn">Other Link</a>
+ 
+   <div id="dropdown-isi">
+     <a href="#">Sistem Akademik</a>
+	 <a href="#">Berita</a>
+   </div>
+  </div>
+  <a href="#">Tentang Aku</a>
+  </div>
+  <div id="content">
+  <iframe src="" seamless width="100%" height="500px"></iframe>
+  </div>
+  <div id="footer">(C)2019 by Harry Witriyono, M.Kom
+  </div>
+ </body>
+</html>
