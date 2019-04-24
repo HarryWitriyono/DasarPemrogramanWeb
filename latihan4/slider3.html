@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <style>
+ #sliderbox {
+   position:relative;
+   width:4800px;
+   animation-name: slideranimation;
+   animation-duration:30s;
+   animation-iteration-count:infinite;
+ }
+ #sliderbox img{ float:left; width:800px; height:400px;
+ }
+ 
+ @keyframes slideranimation {
+   0% { left:0px;
+   }
+   15% { /* saat 4.5 dtk gb1 */
+   left: 0px;
+   }
+   30% { /* saat 6 dtk 2 */
+   left:-800px;
+   }
+   45% { /* saat 9 dtk 3*/
+   left:-1600px;
+   }
+   60% { /* saat 10 dtk 4*/
+   left:-2400px;
+   }
+   75% { /* saat 12 dtk 5*/
+   left:-3200px;
+   }
+   90% { /* saat 15 dtk 6*/
+   left:-4000px;
+   }
+   100% { /* saat 15 dtk*/
+   left:0px;
+   }
+   
+ }
+ #container{ width:800px;margin-left:20%;
+ overflow:hidden;
+ }
+ </style>
+</head>
+<body>
+<div id="container">
+ <div id="sliderbox">
+  <img src="images/foto1.jpg">
+  <img src="images/foto2.jpg">
+  <img src="images/foto3.jpg">
+  <img src="images/foto4.jpg">
+  <img src="images/foto5.jpg">
+  <img src="images/foto6.jpg">
+ </div>
+</div>
+
+</body>
+</html>
