@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+ <head><title>Hitung Luas Segitiga</title></head>
+ <body>
+ Hasil perhitungan luas segita :<br>
+ dengan luas alas = <b id="na"></b><br>
+ dan tinggi = <b id="nt"></b><br>
+ Luasnya adalah = <b id="nl"></b><br>
+ <script>
+ var alas = prompt('Ketik nilai alas segitiga');
+ var tinggi = prompt('Ketik tinggi segitiga');
+ luas = alas * tinggi / 2;
+ document.getElementById('na').innerHTML=alas;
+ document.getElementById('nt').innerHTML=tinggi;
+ document.getElementById('nl').innerHTML=luas;
+ </script>
+ </body>
+</html>

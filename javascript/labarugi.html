@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+ <head><title>Menghitung Laba / Rugi</title></head>
+ <body>
+ <h2>Perhitungan Laba/Rugi</h2>
+ Modal perusahaan : <b id="bm"></b><br>
+ Pendapatan : <b id="bd"></b><br>
+ Pengeluaran: <b id="bl"></b><br>
+ Biaya : <b id="by"></b><br>
+ Maka Laba/Ruginya : <b id="hasil"></b><br>
+ <script>
+ //Hitung laba berdasarkan modal,pendapatan,pengeluaran,biaya
+ var modal=prompt('Ketik modal perusahaan');
+ var pendapatan=prompt('Ketik total pendapatan perusahaan');
+ var pengeluaran=prompt('Ketik total pengeluaran perusahaan');
+ var biaya=prompt('Ketik total biaya-biaya perusahaan');
+ var laba=0;
+ laba = modal + pendapatan;
+ laba = laba - pengeluaran;
+ laba = laba - biaya;
+ document.getElementById('bm').innerHTML=modal;
+ document.getElementById('bd').innerHTML=pendapatan;
+ document.getElementById('bl').innerHTML=pengeluaran;
+ document.getElementById('by').innerHTML=biaya;
+ document.getElementById('hasil').innerHTML=laba;
+ </script>
+ </body>
+</html>

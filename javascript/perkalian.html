@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+ <head>
+  <title>Latihan 1 Javascript</title>
+ </head>
+ <body onload="print()">
+ <h2>Latihan 1 Javascript</h2>
+ Hasil perhitungan nilai <b id="nilaia"></b>
+ x <b id="nilaib"></b>=<b id="nilaic"></b>
+ <script>
+   var a = prompt('Ketik nilai a');
+   var b = prompt('Ketik nilai b');
+   c = a * b;
+   document.getElementById("nilaia").innerHTML=a;
+   document.getElementById("nilaib").innerHTML=b;
+   document.getElementById("nilaic").innerHTML=c;
+   alert('Hasil perhitungan '+a+' x '+b+' = '+c);
+  </script>
+  </body>
+</html>
