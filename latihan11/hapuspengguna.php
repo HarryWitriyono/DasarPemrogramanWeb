@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Cari Pengguna</title>
+  <title>Hapus Rekord Pengguna</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -12,27 +12,25 @@
 <body>
 
 <div class="container">
-  <h2>Cari Pengguna</h2>
+  <h2>Hapus Rekord Pengguna</h2>
   <form method="post">
-	<div class="form-group">
-      <label for="NamaPengguna">Nama Pengguna:</label>
-      <input type="text" class="form-control" id="NamaPengguna" placeholder="Enter nama pengguna" name="NamaPengguna">
+    <div class="form-group">
+      <label for="email">Ketik nama lengkap pengguna yang dihapus:</label>
+      <input type="text" class="form-control" id="email" placeholder="Ketik nama pengguna yang akan dihapus" name="namadihapus">
     </div>
-    <button type="submit" class="btn btn-primary" name="bCari">Cari Rekord Pengguna</button>
+	    <button type="submit" class="btn btn-primary" name="bhapus" onclick="return confirm('Apakah rekord dengan kata kunci yang terpilih dihapus ?')">Hapus</button>
   </form>
 </div>
 </body>
 </html>
-<?php 
-if (isset($_POST['bCari'])) {
-	$NamaPengguna=$_POST['NamaPengguna'];
+<?php if (isset($_POST['bhapus'])) {
+	$namadihapus=$_POST['namadihapus'];
 	$koneksi=new mysqli("localhost","root","","tokoumb");
-	$sql="SELECT * FROM `pengguna` WHERE `NamaPengguna` LIKE '%$NamaPengguna%'";
+	$sql="DELETE FROM `pengguna` WHERE `pengguna`.`NamaPengguna` = '".$namadihapus."'";
 	$q=$koneksi->query($sql);
-	$rekordpengguna=$q->fetch_all(MYSQLI_ASSOC);
-	if (empty($rekordpengguna)) {
-		echo "Rekord pengguna tidak ditemukan !";
-	    exit();
-	}	
-	include("daftarpengguna.php");
+	if ($q) {
+		echo "Rekord sudah dihapus !";
+	} else {
+		echo "Rekord gagal dihapus !";
+	}
 }
